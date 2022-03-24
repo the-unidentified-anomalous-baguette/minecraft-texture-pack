@@ -1,0 +1,116 @@
+{
+  "namespace": "stonecutter",
+  "toolbar_panel@common.root_panel": {
+    "size": ["100%c", 20],
+    "controls": [
+      {
+        "toolbar_background@stonecutter.toolbar_background": {
+          "size": ["100%cm", "100% + 8px"],
+          "offset": [0, -3],
+          "anchor_from": "top_right",
+          "anchor_to": "top_right",
+
+          "controls": [
+            {
+              "toolbar_stack_panel": {
+                "type": "stack_panel",
+                "orientation": "horizontal",
+
+                "size": ["default", "100% - 8px"],
+                "offset": [0, 3],
+                "anchor_from": "top_middle",
+                "anchor_to": "top_middle",
+
+                "controls": [
+                  {
+                    "padding_1": {
+                      "type": "panel",
+                      "size": [6, 0]
+                    }
+                  },
+                  {
+                    "close_button_panel": {
+                      "type": "panel",
+                      "size": ["100%c", "100%"],
+                      "bindings": [
+                        {
+                          "binding_name": "#close_button_visible",
+                          "binding_name_override": "#visible"
+                        }
+                      ],
+                      "controls": [
+                        {
+                          "close_button@common.light_close_button": {
+                            "size": ["100%cm", "100%cm"],
+                            "offset": [0, 0],
+                            "anchor_from": "center",
+                            "anchor_to": "center"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "padding_2": {
+                      "type": "panel",
+                      "size": [6, 0]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "quick_craft_icon": {
+    "type": "image",
+    "size": [16, 16],
+    "texture": "textures/ui/quick_craft"
+  },
+
+  "quick_craft_button@common_buttons.light_content_button": {
+    "size": [18, 18],
+    "offset": [1, 2],
+    "anchor_from": "bottom_right",
+    "anchor_to": "bottom_right",
+    "$button_content": "stonecutter.quick_craft_icon",
+    "property_bag": {
+      "#collection_name": "crafting_output_items",
+      "#collection_index": 0
+    },
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "button.crafting_output_tertiary",
+        "mapping_type": "pressed"
+      }
+    ]
+  },
+
+  "arrow_icon": {
+    "controls": [
+      {
+        "stonecutter_quick_craft_button@stonecutter.stonecutter_quick_craft_button": {
+          "size": [24, 24],
+          "offset": [4, 6]
+        }
+      }
+    ]
+  },
+
+  "stonecutter_quick_craft_button@stonecutter.quick_craft_button": {
+    "property_bag": {
+      "#collection_name": "stonecutter_result_items"
+    },
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "button.container_auto_place",
+        "mapping_type": "pressed"
+      }
+    ]
+  }
+}

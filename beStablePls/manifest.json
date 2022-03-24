@@ -1,0 +1,17 @@
+{
+    "format_version": 2,
+    "header": {
+        "description": "Bedrock Tweaks §aResource Packs§r by §5DrAv0011§r",
+        "name": "BaguetteTweaks",
+        "uuid": "b36fd89b-ea79-4816-a278-de9a5e539017",
+        "version": [1, 0, 0],
+        "min_engine_version": [1, 16, 0]
+    },
+    "modules": [
+        {
+            "type": "resources",
+            "uuid": "9ff8e19c-ef7f-419c-b48e-9e6f9aa68579",
+            "version": [1, 0, 0]
+        }
+    ]
+}
